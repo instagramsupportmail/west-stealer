@@ -12,12 +12,6 @@
   </kbd>
 </p>
 
-<p align="center">
-<img src="https://img.shields.io/github/last-commit/doener2323/doenerium?style=flat">
-<img src="https://img.shields.io/github/stars/doener2323/doenerium?color=brightgreen">
-<img src="https://img.shields.io/github/forks/doener2323/doenerium?color=brightgreen">
-</p>
-
 🌐 〢 Content
 
 - [📁 Setting up](#setup)
