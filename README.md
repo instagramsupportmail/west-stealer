@@ -79,6 +79,6 @@ I am not responsible for any damages this software may cause. This was made for 
 
 ### Credits
 
-Credits to Pandoric / PandoricGalaxy for creating this beautiful README file
+Credits to Amqterasu#0001 for creating that shit (it's me)
 
 <p align="center"><a href=#top>Back to Top</a></p>
