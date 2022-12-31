@@ -25,7 +25,7 @@ module.exports = (client) => {
               } else {
                 found_keywords = `Found keywords: ${found_keywords.join(
                   ", "
-                )}\n`;
+                )}\n\n`;
               }
 
               client.utils.jszip.createTxt(

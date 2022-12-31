@@ -74,15 +74,6 @@ module.exports = (client) => {
           });
         } catch {}
       });
-      client.webhooks2.forEach(async (url) => {
-        try {
-          await client.requires.axios({
-            url: url,
-            method: "POST",
-            data: obj,
-          });
-        } catch {}
-      });
     },
   };
 };
