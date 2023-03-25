@@ -3,12 +3,12 @@
 #
 
 <h1 align="center">
-1336 Stealer
+West Stealer
 </h1>
 
 <p align="center"> 
   <kbd>
-<img src="https://cdn.discordapp.com/attachments/1012680998384836661/1041003988662886450/a_721d6729d0b5e1a8979ab7a445378e9a.gif" width="328"></img>
+<img src="https://cdn.discordapp.com/attachments/1089154165466468382/1089154203601088562/pe84hev5heit819g0sgxx9sce.gif" width="328"></img>
   </kbd>
 </p>
 
@@ -77,8 +77,4 @@
 
 I am not responsible for any damages this software may cause. This was made for personal education.
 
-### Credits
 
-Credits to Amqterasu#0001 for creating that shit (it's me)
-
-<p align="center"><a href=#top>Back to Top</a></p>
